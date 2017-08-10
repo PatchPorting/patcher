@@ -1,0 +1,11 @@
+--- a/allchblk.c
++++ b/allchblk.c
+@@ -661,7 +661,7 @@
+     signed_word size_needed;    /* number of bytes in requested objects */
+     signed_word size_avail;     /* bytes available in this block        */
+ 
+-    size_needed = HBLKSIZE * OBJ_SZ_TO_BLOCKS(sz);
++    size_needed = HBLKSIZE * OBJ_SZ_TO_BLOCKS_CHECKED(sz);
+ 
+     /* search for a big enough block in free list */
+         hbp = GC_hblkfreelist[n];

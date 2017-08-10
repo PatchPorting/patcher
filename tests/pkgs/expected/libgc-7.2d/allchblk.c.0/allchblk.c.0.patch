@@ -1,0 +1,11 @@
+--- a/allchblk.c
++++ b/allchblk.c
+@@ -594,7 +594,7 @@
+                      /* split.                                          */
+ 
+     GC_ASSERT((sz & (GRANULE_BYTES - 1)) == 0);
+-    blocks = OBJ_SZ_TO_BLOCKS(sz);
++    blocks = OBJ_SZ_TO_BLOCKS_CHECKED(sz);
+     if ((signed_word)(blocks * HBLKSIZE) < 0) {
+       return 0;
+     }

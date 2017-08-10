@@ -1,0 +1,11 @@
+--- a/allchblk.c
++++ b/allchblk.c
+@@ -583,7 +583,7 @@ GC_allochblk(size_t sz, int kind, unsigned flags/* IGNORE_OFF_PAGE or 0 */)
+                      /* split.                                          */
+ 
+     GC_ASSERT((sz & (GRANULE_BYTES - 1)) == 0);
+-    blocks = OBJ_SZ_TO_BLOCKS(sz);
++    blocks = OBJ_SZ_TO_BLOCKS_CHECKED(sz);
+     if ((signed_word)(blocks * HBLKSIZE) < 0) {
+       return 0;
+     }

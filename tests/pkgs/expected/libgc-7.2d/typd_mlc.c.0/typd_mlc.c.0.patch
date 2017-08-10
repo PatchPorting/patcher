@@ -1,0 +1,18 @@
+--- a/typd_mlc.c
++++ b/typd_mlc.c
+@@ -614,6 +614,15 @@
+    return((void *) op);
+ }
+ 
++#include <limits.h>
++#ifdef SIZE_MAX
++# define GC_SIZE_MAX SIZE_MAX
++#else
++# define GC_SIZE_MAX (~(size_t)0)
++#endif
++
++#define GC_SQRT_SIZE_MAX ((((size_t)1) << (WORDSZ / 2)) - 1)
++
+ GC_API void * GC_CALL GC_malloc_explicitly_typed_ignore_off_page(size_t lb,
+                                                                  GC_descr d)
+ {

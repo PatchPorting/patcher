@@ -1,0 +1,15 @@
+[
+    {"type": "Classical"},
+    {"type": "Offset"},
+    {"type": "Fuzz", "options":{"fromTop": 1}},
+    {"type": "Fuzz", "options":{"fromBottom": 1}},
+    {"type": "Fuzz", "options":{"fromTop": 2}},
+    {"type": "Fuzz", "options":{"fromBottom": 2}},
+    {"type": "Fuzz", "options":{"fromTop": 3}},
+    {"type": "Fuzz", "options":{"fromBottom": 3}},
+    {"type": "Fuzz", "options":{"fromTop": 1, "fromBottom": 1}},
+    {"type": "Fuzz", "options":{"fromTop": 2, "fromBottom": 2}},
+    {"type": "Fuzz", "options":{"fromTop": 3, "fromBottom": 3}},
+    {"type": "IgnoreFilename"},
+    {"type": "FuzzIgnoreFilename", "options":{"fromTop": 1}}
+]

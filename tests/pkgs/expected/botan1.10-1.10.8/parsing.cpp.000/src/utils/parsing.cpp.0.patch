@@ -1,0 +1,11 @@
+--- a/src/utils/parsing.cpp
++++ b/src/utils/parsing.cpp
+@@ -230,6 +230,8 @@
+ 
+          if(p1 == name1.end() && p2 == name2.end())
+             return true;
++         if(p1 == name1.end() || p2 == name2.end())
++            return false;
+          }
+ 
+       if(!Charset::caseless_cmp(*p1, *p2))
